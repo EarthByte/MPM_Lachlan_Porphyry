@@ -1,0 +1,15 @@
+Feature,Importance,Variance
+Magmap2019-grid-tmi_1vd-AWAGS_MAG_2019_std,0.17529,0.004692769700834295
+Magmap2019-grid-tmi_1vd-AWAGS_MAG_2019_mean,0.10503,0.004515302553065325
+Magmap2019-grid-tmi_rtp_enhancement-PGravTHD-AWAGS_MAG_2019_dissimilarity,0.09528,0.002743473584673334
+IntrusionsBndys_FaultedBndys,0.09134,0.0012887850102816525
+RockUnitBndyFaults_LAO_Faulted boundary,0.08472,0.0017511776263846195
+Gravmap2019-grid-dem_ellips_dx,0.06508,0.0011712649601594953
+Magmap2019-grid-tmi_rtp_enhancement-Phase-AWAGS_MAG_2019_std,0.05745,0.0011411922464283886
+MetamorphicBoundaries_Unconformities,0.05465,0.0014424058931356957
+Magmap2019-grid-tmi_rtp_enhancement-PGrav-AWAGS_MAG_2019_mean,0.05263,0.0009074739167681822
+MetamorphicFacies_Tabberabberan_Greenschist facies,0.04884,0.0002289900332869854
+Radmap2019-grid-u2th_ratio-AWAGS_RAD_2019_dissimilarity,0.04783,0.00046591560960263363
+Gravmap2019-grid-grv_cscba_tilt_std,0.04206,0.0016999718644117212
+MetamorphicFacies_Benambran_Greenschist facies,0.0402,0.0012460830193295718
+Radmap2019-grid-dose_terr-AWAGS_RAD_2019_mean,0.0396,0.0008047195109407545
