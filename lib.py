@@ -15,7 +15,13 @@ from typing import List, Literal, Tuple, Union
 # -------------------------------------
 
 def get_ellipsoid_name_gpd(crs):
-    """Helper function to get the correct ellipsoid name for Geod"""
+    """
+    Helper function to get the correct ellipsoid name for Geod
+    
+    Ehsan Farahbakhsh
+    EarthByte Group, School of Geosciences, The University of Sydney, Sydney, Australia
+    Date: 07/09/2024
+    """
     ellipsoid_name = crs.ellipsoid.name.lower()
     if 'grs' in ellipsoid_name and '1980' in ellipsoid_name:
         return 'GRS80'
@@ -25,13 +31,25 @@ def get_ellipsoid_name_gpd(crs):
         return 'WGS84'  # Default to WGS84 if unknown
 
 def get_nearest_point(point, geometry):
-    """Helper function to get the nearest point on a geometry"""
+    """
+    Helper function to get the nearest point on a geometry
+    
+    Ehsan Farahbakhsh
+    EarthByte Group, School of Geosciences, The University of Sydney, Sydney, Australia
+    Date: 07/09/2024
+    """
     if isinstance(geometry, (LineString, MultiLineString)):
         return nearest_points(point, geometry)[1]
     return geometry
 
 def get_suitable_projected_crs(gdf):
-    """Helper function to get a suitable projected CRS based on the data's extent"""
+    """
+    Helper function to get a suitable projected CRS based on the data's extent
+    
+    Ehsan Farahbakhsh
+    EarthByte Group, School of Geosciences, The University of Sydney, Sydney, Australia
+    Date: 07/09/2024
+    """
     bounds = gdf.total_bounds
     center_lon = (bounds[0] + bounds[2]) / 2
     center_lat = (bounds[1] + bounds[3]) / 2
@@ -70,6 +88,10 @@ def get_dist_line(
         - For geodesic calculations, the function uses the ellipsoid associated with the input CRS.
         - If the input CRS is projected and geodesic distance is requested, the data is converted to a geographic CRS.
         - If the input CRS is geographic and Euclidean distance is requested, the data is projected to a suitable local projection.
+        
+        Ehsan Farahbakhsh
+        EarthByte Group, School of Geosciences, The University of Sydney, Sydney, Australia
+        Date: 07/09/2024
     """
     # Input validation
     if not isinstance(xs, (list, np.ndarray, Series)) or not isinstance(ys, (list, np.ndarray, Series)):
@@ -177,6 +199,10 @@ def get_cat_data(
         - If a point falls within multiple polygons, the value from the first polygon is used.
         - The function assumes that all input data are in the same coordinate reference system.
         - Any errors during file processing will be logged, and the file will be skipped.
+        
+        Ehsan Farahbakhsh
+        EarthByte Group, School of Geosciences, The University of Sydney, Sydney, Australia
+        Date: 07/09/2024
     """
     # Input validation
     if not isinstance(xs, (list, np.ndarray, Series)) or not isinstance(ys, (list, np.ndarray, Series)):
@@ -280,6 +306,10 @@ def get_grid_stat_features(
     Notes:
         - Returns NaN for a statistic if all pixels in the window are NaN or nodata.
         - Attempts to read nodata value from raster metadata if not provided.
+        
+        Ehsan Farahbakhsh
+        EarthByte Group, School of Geosciences, The University of Sydney, Sydney, Australia
+        Date: 07/09/2024
     """
     # Convert inputs to numpy arrays if they're not already
     xs = np.array(xs)
@@ -434,6 +464,10 @@ def get_grid_grad_stat_features(
     Notes:
         - Returns NaN for a statistic if all pixels in the window are NaN or nodata.
         - Attempts to read nodata value from raster metadata if not provided.
+        
+        Ehsan Farahbakhsh
+        EarthByte Group, School of Geosciences, The University of Sydney, Sydney, Australia
+        Date: 07/09/2024
     """
     # Convert inputs to numpy arrays if they're not already
     xs = np.array(xs)
@@ -596,6 +630,10 @@ def get_grid_tex_features(
     Notes:
         - Returns NaN for a feature if all pixels in the window are NaN or nodata.
         - Attempts to read nodata value from raster metadata if not provided.
+        
+        Ehsan Farahbakhsh
+        EarthByte Group, School of Geosciences, The University of Sydney, Sydney, Australia
+        Date: 07/09/2024
     """
     # Convert inputs to numpy arrays if they're not already
     xs = np.array(xs)
