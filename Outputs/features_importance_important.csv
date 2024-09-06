@@ -1,0 +1,27 @@
+Feature,Importance,Variance
+Magmap2019-grid-tmi_1vd-AWAGS_MAG_2019_std,0.23539,0.002661856515180376
+Magmap2019-grid-tmi_rtp_enhancement-PGravTHD-AWAGS_MAG_2019_contrast,0.10524,0.0010601228598164255
+Magmap2019-grid-tmi_rtp_enhancement-PGrav-AWAGS_MAG_2019_std,0.07584,0.000756054976658961
+Magmap2019-grid-tmi_1vd-AWAGS_MAG_2019_mean,0.07022,0.0009430000843003361
+RockUnitBndyFaults_LAO_Faulted boundary,0.06589,0.00025293647277487344
+MetamorphicFacies_Tabberabberan_Greenschist facies,0.05758,0.000667368045797921
+MetamorphicBoundaries_Unconformities,0.05214,0.0002801782924366489
+Magmap2019-grid-tmi_rtp_enhancement-PGrav-AWAGS_MAG_2019_mean,0.03774,0.00048757556401035976
+Magmap2019-grid-tmi_rtp_enhancement-Phase-AWAGS_MAG_2019_contrast,0.03348,0.00020029312430718194
+Magmap2019-grid-tmi_rtp_enhancement-Phase-AWAGS_MAG_2019_std,0.03214,0.0002695287866320092
+IntrusionsBndys_FaultedBndys,0.03102,0.00010819478598974401
+Magmap2019-grid-tmi_rtp_enhancement-PGrav-AWAGS_MAG_2019_contrast,0.02537,0.00014682399567024328
+IntrusionsBndys_IntrusiveBndys,0.02241,3.8184253610995525e-05
+Gravmap2019-grid-dem_geoid_x_mean,0.02033,5.134929249689405e-05
+Magmap2019-grid-tmi_rtp_05vd-AWAGS_MAG_2019_median,0.01725,1.3548150976261733e-05
+MetamorphicBoundaries_Faults,0.01481,9.918722471868727e-05
+Magmap2019-grid-tmi_1vd-AWAGS_MAG_2019_contrast,0.01456,1.7014048248910892e-05
+MetamorphicBoundaries_MetamorphicBndys,0.01281,6.805837269523499e-05
+Magmap2019-grid-tmi_rtp_enhancement-PGravTHD-AWAGS_MAG_2019_min,0.01195,2.547843784369918e-05
+Gravmap2019-grid-dem_geoid_x_std,0.01078,7.066192566849771e-05
+Magmap2019-grid-tmi_rtp_as-AWAGS_MAG_2019_correlation,0.01072,4.3552659694812116e-05
+Magmap2019-grid-tmi_rtp_upcon-UC24km30kmRes-AWAGS_MAG_2019_energy,0.01033,1.4956627675358853e-05
+MetamorphicFacies_Tabberabberan_Subgreenschist facies,0.00933,2.6955988094079368e-05
+Magmap2019-grid-tmi_1vd-AWAGS_MAG_2019_correlation,0.00876,1.32673662396008e-05
+Magmap2019-grid-tmi_rtp_upcon-UC42km50kmRes-AWAGS_MAG_2019_energy,0.0078,2.1343843456931003e-05
+MetamorphicFacies_Benambran_Greenschist facies,0.0061,2.762328412371199e-05
