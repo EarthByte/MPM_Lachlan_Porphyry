@@ -1,12 +1,15 @@
+from geopandas import GeoSeries
 import geopandas as gpd
 import numpy as np
 import os
+from packaging import version
 import pandas as pd
 from pandas import Series
 from pyproj import CRS, Geod
 import rasterio
 from rasterio.windows import Window
-from shapely.geometry import Point, LineString, MultiLineString
+from shapely import __version__ as shapely_version
+from shapely.geometry import Point, LineString, MultiLineString, GeometryCollection, MultiPoint
 from shapely.ops import nearest_points
 from shapely.strtree import STRtree
 from skimage.feature import graycomatrix, graycoprops
@@ -36,11 +39,30 @@ def get_nearest_point(point, geometry):
     
     Ehsan Farahbakhsh
     EarthByte Group, School of Geosciences, The University of Sydney, Sydney, Australia
-    Date: 07/09/2024
+    Date: 17/09/2024
     """
-    if isinstance(geometry, (LineString, MultiLineString)):
-        return nearest_points(point, geometry)[1]
-    return geometry
+    return nearest_points(point, geometry)[1]
+
+def extract_point(geom):
+    """
+    Extract a point from a geometry, handling all geometry types
+    
+    Ehsan Farahbakhsh
+    EarthByte Group, School of Geosciences, The University of Sydney, Sydney, Australia
+    Date: 17/09/2024
+    """
+    if isinstance(geom, Point):
+        return geom
+    elif isinstance(geom, (LineString, MultiLineString)):
+        return Point(geom.interpolate(0, normalized=True))
+    elif isinstance(geom, GeometryCollection):
+        for part in geom.geoms:
+            if not part.is_empty:
+                return extract_point(part)
+    elif isinstance(geom, MultiPoint):
+        return geom[0]
+    # If we can't extract a specific point, return the centroid
+    return geom.centroid
 
 def get_suitable_projected_crs(gdf):
     """
@@ -91,7 +113,7 @@ def get_dist_line(
         
         Ehsan Farahbakhsh
         EarthByte Group, School of Geosciences, The University of Sydney, Sydney, Australia
-        Date: 07/09/2024
+        Date: 17/09/2024
     """
     # Input validation
     if not isinstance(xs, (list, np.ndarray, Series)) or not isinstance(ys, (list, np.ndarray, Series)):
@@ -148,17 +170,27 @@ def get_dist_line(
             lines = [line.to_crs(geo_crs) for line in lines]
         ellps = get_ellipsoid_name_gpd(points_gdf.crs)
         geod = Geod(ellps=ellps)
-    
+
+
+    shapely_20 = version.parse(shapely_version) >= version.parse("2.0")
+
     for i, line in enumerate(lines):
         line_tree = STRtree(line.geometry)
-        nearest_geoms = [line_tree.nearest(p) for p in points_gdf.geometry]
+        
+        if shapely_20:
+            nearest_indices = line_tree.nearest(points_gdf.geometry)
+            nearest_geoms = GeoSeries(line.geometry.iloc[nearest_indices].values, crs=line.crs)
+        else:
+            nearest_geoms = GeoSeries([line_tree.nearest(p) for p in points_gdf.geometry], crs=line.crs)
         
         if distance_type == 'euclidean':
-            dist_to_lines[:, i] = [p.distance(nearest) for p, nearest in zip(points_gdf.geometry, nearest_geoms)]
+            dist_to_lines[:, i] = points_gdf.geometry.distance(nearest_geoms)
         else:  # geodesic
             for j, (p, nearest) in enumerate(zip(points_gdf.geometry, nearest_geoms)):
-                nearest_point = get_nearest_point(p, nearest)
-                _, _, distance = geod.inv(p.x, p.y, nearest_point.x, nearest_point.y)
+                p_point = extract_point(p)
+                nearest_point = get_nearest_point(p_point, nearest)
+                
+                _, _, distance = geod.inv(p_point.x, p_point.y, nearest_point.x, nearest_point.y)
                 dist_to_lines[j, i] = distance
     
     return pd.DataFrame(dist_to_lines, columns=column_names)
@@ -272,8 +304,7 @@ def get_grid_stat_features(
     buffer_shape: str = 'circle',
     buffer_size: int = 1,
     stats: List[str] = ['mean', 'std', 'min', 'max', 'median'],
-    export_pixels: bool = False,
-    nodata_value: float = None
+    export_pixels: bool = False
 ) -> Union[pd.DataFrame, Tuple[pd.DataFrame, pd.DataFrame]]:
     """
     Calculate statistics for pixels surrounding each point in each raster file.
@@ -289,7 +320,6 @@ def get_grid_stat_features(
                                      Supported stats: 'mean', 'std', 'min', 'max', 'median'.
                                      Defaults to ['mean', 'std', 'min', 'max', 'median'].
         export_pixels (bool, optional): If True, export pixel values for each point. Defaults to False.
-        nodata_value (float, optional): Value to be treated as nodata. If None, will attempt to read from raster metadata.
     
     Returns:
         Union[pd.DataFrame, Tuple[pd.DataFrame, pd.DataFrame]]: 
@@ -305,11 +335,11 @@ def get_grid_stat_features(
     
     Notes:
         - Returns NaN for a statistic if all pixels in the window are NaN or nodata.
-        - Attempts to read nodata value from raster metadata if not provided.
+        - Reads nodata value from raster metadata for each file.
         
         Ehsan Farahbakhsh
         EarthByte Group, School of Geosciences, The University of Sydney, Sydney, Australia
-        Date: 07/09/2024
+        Date: 11/09/2024
     """
     # Convert inputs to numpy arrays if they're not already
     xs = np.array(xs)
@@ -344,9 +374,8 @@ def get_grid_stat_features(
         
         try:
             with rasterio.open(raster_path) as src:
-                # Attempt to read nodata value from metadata if not provided
-                if nodata_value is None:
-                    nodata_value = src.nodata
+                # Read nodata value from metadata
+                nodata_value = src.nodata
                 
                 for i, (x, y) in enumerate(zip(xs.flat, ys.flat)):
                     # Convert geographic coordinates to pixel coordinates
@@ -427,8 +456,7 @@ def get_grid_grad_stat_features(
     buffer_shape: str = 'circle',
     buffer_size: int = 1,
     stats: List[str] = ['mean', 'std', 'min', 'max', 'median'],
-    export_pixels: bool = False,
-    nodata_value: float = None
+    export_pixels: bool = False
 ) -> Union[pd.DataFrame, Tuple[pd.DataFrame, pd.DataFrame]]:
     """
     Calculate statistics for gradients of pixels surrounding each point in each raster file.
@@ -447,7 +475,6 @@ def get_grid_grad_stat_features(
                                      Supported stats: 'mean', 'std', 'min', 'max', 'median'.
                                      Defaults to ['mean', 'std', 'min', 'max', 'median'].
         export_pixels (bool, optional): If True, export gradient values for each point. Defaults to False.
-        nodata_value (float, optional): Value to be treated as nodata. If None, will attempt to read from raster metadata.
     
     Returns:
         Union[pd.DataFrame, Tuple[pd.DataFrame, pd.DataFrame]]: 
@@ -463,11 +490,11 @@ def get_grid_grad_stat_features(
     
     Notes:
         - Returns NaN for a statistic if all pixels in the window are NaN or nodata.
-        - Attempts to read nodata value from raster metadata if not provided.
+        - Reads nodata value from raster metadata for each file.
         
         Ehsan Farahbakhsh
         EarthByte Group, School of Geosciences, The University of Sydney, Sydney, Australia
-        Date: 07/09/2024
+        Date: 11/09/2024
     """
     # Convert inputs to numpy arrays if they're not already
     xs = np.array(xs)
@@ -506,9 +533,8 @@ def get_grid_grad_stat_features(
         
         try:
             with rasterio.open(raster_path) as src:
-                # Attempt to read nodata value from metadata if not provided
-                if nodata_value is None:
-                    nodata_value = src.nodata
+                # Read nodata value from metadata
+                nodata_value = src.nodata
                 
                 for i, (x, y) in enumerate(zip(xs.flat, ys.flat)):
                     # Convert geographic coordinates to pixel coordinates
@@ -597,8 +623,7 @@ def get_grid_tex_features(
     raster_paths: Union[str, List[str]],
     buffer_size: int = 1,
     texture_features: List[str] = ['contrast', 'dissimilarity', 'homogeneity', 'energy', 'correlation', 'ASM'],
-    export_pixels: bool = False,
-    nodata_value: float = None
+    export_pixels: bool = False
 ) -> Union[pd.DataFrame, Tuple[pd.DataFrame, pd.DataFrame]]:
     """
     Calculate GLCM texture features for pixels surrounding each point in each raster file.
@@ -613,7 +638,6 @@ def get_grid_tex_features(
                                                 Supported features: 'contrast', 'dissimilarity', 'homogeneity', 'energy', 'correlation', 'ASM'.
                                                 Defaults to ['contrast', 'dissimilarity', 'homogeneity', 'energy', 'correlation', 'ASM'].
         export_pixels (bool, optional): If True, export pixel values for each point. Defaults to False.
-        nodata_value (float, optional): Value to be treated as nodata. If None, will attempt to read from raster metadata.
     
     Returns:
         Union[pd.DataFrame, Tuple[pd.DataFrame, pd.DataFrame]]: 
@@ -628,12 +652,12 @@ def get_grid_tex_features(
         rasterio.errors.RasterioIOError: If there's an error reading a raster file.
     
     Notes:
-        - Returns NaN for a feature if all pixels in the window are NaN or nodata.
-        - Attempts to read nodata value from raster metadata if not provided.
+        - Returns NaN for a feature if all pixels in the window are nodata or invalid.
+        - Reads nodata value from raster metadata for each file.
         
         Ehsan Farahbakhsh
         EarthByte Group, School of Geosciences, The University of Sydney, Sydney, Australia
-        Date: 07/09/2024
+        Date: 11/09/2024
     """
     # Convert inputs to numpy arrays if they're not already
     xs = np.array(xs)
@@ -666,9 +690,8 @@ def get_grid_tex_features(
         
         try:
             with rasterio.open(raster_path) as src:
-                # Attempt to read nodata value from metadata if not provided
-                if nodata_value is None:
-                    nodata_value = src.nodata
+                # Read nodata value from metadata
+                nodata_value = src.nodata
                 
                 for i, (x, y) in enumerate(zip(xs.flat, ys.flat)):
                     # Convert geographic coordinates to pixel coordinates
@@ -687,20 +710,26 @@ def get_grid_tex_features(
                     # Read the data within the window
                     data = src.read(1, window=window)
                     
-                    # Remove nodata values
+                    # Create a mask for nodata values
                     if nodata_value is not None:
-                        data = np.ma.masked_equal(data, nodata_value).filled(np.nan)
+                        mask = (data != nodata_value)
+                    else:
+                        mask = np.ones_like(data, dtype=bool)
                     
-                    # Check if all values are NaN or if no valid data remains
-                    all_invalid = np.all(np.isnan(data)) or data.size == 0
+                    # Check if all values are invalid or if no valid data remains
+                    all_invalid = np.all(~mask) or data.size == 0
                     
                     if not all_invalid:
-                        # Normalize the data to 0-255 range for GLCM, excluding NaNs
-                        valid_data = data[~np.isnan(data)]
-                        data_normalized = ((data - np.min(valid_data)) / (np.max(valid_data) - np.min(valid_data)) * 255).astype(np.uint8)
+                        # Use only valid data for normalization
+                        valid_data = data[mask]
                         
-                        # Replace NaNs with 0 for GLCM calculation
-                        data_normalized[np.isnan(data_normalized)] = 0
+                        # Normalize the data to 0-255 range for GLCM
+                        data_min, data_max = np.min(valid_data), np.max(valid_data)
+                        if data_max > data_min:
+                            data_normalized = np.where(mask, ((data - data_min) / (data_max - data_min) * 255).astype(np.uint8), 0)
+                        else:
+                            # If all valid values are the same, set them to 255
+                            data_normalized = np.where(mask, 255, 0)
                         
                         # Calculate GLCM
                         glcm = graycomatrix(data_normalized, [1], [0, np.pi/4, np.pi/2, 3*np.pi/4], levels=256, symmetric=True, normed=True)
