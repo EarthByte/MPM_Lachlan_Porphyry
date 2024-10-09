@@ -339,7 +339,7 @@ def get_grid_stat_features(
         
         Ehsan Farahbakhsh
         EarthByte Group, School of Geosciences, The University of Sydney, Sydney, Australia
-        Date: 11/09/2024
+        Date: 26/09/2024
     """
     # Convert inputs to numpy arrays if they're not already
     xs = np.array(xs)
@@ -366,6 +366,8 @@ def get_grid_stat_features(
     results = [{} for _ in range(xs.size)]  # Initialize a list of dictionaries for each point
     pixel_values = [{} for _ in range(xs.size)]  # Initialize a list of dictionaries for pixel values
     
+
+
     for raster_path in raster_paths:
         if not os.path.exists(raster_path):
             raise FileNotFoundError(f"Raster file not found: {raster_path}")
@@ -380,6 +382,9 @@ def get_grid_stat_features(
                 for i, (x, y) in enumerate(zip(xs.flat, ys.flat)):
                     # Convert geographic coordinates to pixel coordinates
                     row, col = src.index(x, y)
+                    
+                    # Convert row and col to integers
+                    row, col = int(row), int(col)
                     
                     # Define the window around the point
                     window_row_start = max(0, row - buffer_size)
@@ -494,7 +499,7 @@ def get_grid_grad_stat_features(
         
         Ehsan Farahbakhsh
         EarthByte Group, School of Geosciences, The University of Sydney, Sydney, Australia
-        Date: 11/09/2024
+        Date: 26/09/2024
     """
     # Convert inputs to numpy arrays if they're not already
     xs = np.array(xs)
@@ -539,6 +544,9 @@ def get_grid_grad_stat_features(
                 for i, (x, y) in enumerate(zip(xs.flat, ys.flat)):
                     # Convert geographic coordinates to pixel coordinates
                     row, col = src.index(x, y)
+                    
+                    # Convert row and col to integers
+                    row, col = int(row), int(col)
                     
                     # Define the window around the point
                     window_row_start = max(0, row - buffer_size)

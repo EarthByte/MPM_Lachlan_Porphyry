@@ -1,0 +1,139 @@
+Feature,Importance,Variance
+Magmap2019-grid-tmi_1vd-AWAGS_MAG_2019_std,0.12988,0.012673857402393681
+Magmap2019-grid-tmi_1vd-AWAGS_MAG_2019_mean,0.06277,0.0342759533180602
+Gravmap2019-grid-grv_cscba_tilt_max,0.05787,0.0009618590811544659
+RockUnitBndyFaults_LAO_Faulted boundary,0.05773,0.004100733804007084
+AlOH_Group_Composition_correlation,0.04062,0.0011581872713870471
+MetamorphicBoundaries_Unconformities,0.03501,0.00020016641361255468
+MetamorphicFacies_Tabberabberan_Greenschist facies,0.03471,0.0024810362728942916
+Magmap2019-grid-tmi_rtp_enhancement-PGrav-AWAGS_MAG_2019_mean,0.02983,5.81739436313106e-05
+Radmap2019-grid-uth_ratio-AWAGS_RAD_2019_mean,0.02312,0.00013389805492562375
+Magmap2019-grid-tmi_rtp_enhancement-Phase-AWAGS_MAG_2019_std,0.0224,0.001369829653492737
+Radmap2019-grid-dose_terr-AWAGS_RAD_2019_mean,0.02175,0.00028038484573580203
+IntrusionsBndys_FaultedBndys,0.0208,0.0008317617918404252
+Ferrous_Iron_Index_correlation,0.01721,0.00043083439152863027
+MetamorphicFacies_Tabberabberan_Subgreenschist facies,0.01694,0.0004866912035723353
+IntrusionsBndys_IntrusiveBndys,0.01652,0.0003901288524191673
+MetamorphicFacies_Benambran_Greenschist facies,0.01544,0.009198001761673203
+Radmap2019-grid-thk_ratio-AWAGS_RAD_2019_std,0.01443,0.00011257291942817576
+Gravmap2016-grid-grv_cscba_mean,0.01442,0.0019752046332677806
+Gravmap2019-grid-grv_cscba_1vd_mean,0.01381,0.00046521104957354144
+RockUnits_LAO_Monzonite,0.01261,0.00023831549483124852
+Magmap2019-grid-tmi_rtp_05vd-AWAGS_MAG_2019_median,0.0126,0.0001167632919313836
+Radmap2019-grid-uk_ratio-AWAGS_RAD_2019_contrast,0.01234,0.0016402691632781373
+MgOH_Group_Composition_mean,0.01224,0.0001986757004888418
+Magmap2019-grid-tmi_rtp_enhancement-PGravTHD-AWAGS_MAG_2019_min,0.01135,0.003145798811259502
+MetamorphicBoundaries_MetamorphicBndys,0.01126,0.0
+Ferric_Oxide_Composition_max,0.0106,0.00033237827308804646
+Gravmap2019-grid-grv_cscba_1vd-IncludesAirborne_std,0.00974,0.0
+Magmap2019-grid-tmi_rtp_enhancement-PGrav-AWAGS_MAG_2019_contrast,0.00953,3.237933999606923e-05
+Radmap2019-grid-thk_ratio-AWAGS_RAD_2019_correlation,0.00935,0.0
+Gravmap2019-grid-dem_geoid_x_mean,0.00928,0.0
+Radmap2019-grid-dose_terr-AWAGS_RAD_2019_std,0.00893,0.0009809816490486832
+RockUnits_LAO_Andesite,0.00766,0.00034137561767228023
+RockUnits_LAO_Null,0.0072,5.741364923851576e-33
+Gravmap2019-grid-grv_cscba_1vd-IncludesAirborne_max,0.00679,0.0009807132085557873
+Ferric_Oxide_Composition_mean,0.00679,0.00011765103782332079
+Ferric_Oxide_Composition_std,0.00644,6.015189310751053e-05
+Magmap2019-grid-tmi_1vd-AWAGS_MAG_2019_contrast,0.0063,0.0
+Magmap2019-grid-tmi_rtp_enhancement-PGrav-AWAGS_MAG_2019_homogeneity,0.00623,0.0
+Radmap2019-grid-dose_terr-AWAGS_RAD_2019_correlation,0.00597,2.2509500852509882e-32
+MetamorphicBoundaries_Faults,0.00562,1.587807144951427e-06
+Gravmap2019-grid-grv_cscba_05vd-IncludesAirborne_min,0.0054,0.0
+Magmap2019-grid-tmi_rtp_enhancement-Phase-AWAGS_MAG_2019_mean,0.00505,0.0
+Gravmap2016-grid-grv_cscba_std,0.00501,0.0
+Radmap2019-grid-u_conc-AWAGS_RAD_2019_contrast,0.00478,0.0
+Opaque_Index_correlation,0.00478,0.00142312705544244
+Magmap2019-grid-tmi_1vd-AWAGS_MAG_2019_correlation,0.00475,0.0
+Radmap2019-grid-u_conc-AWAGS_RAD_2019_min,0.00474,0.0
+Radmap2019-grid-u_conc-AWAGS_RAD_2019_correlation,0.00473,0.0
+Radmap2019-grid-dose_terr-AWAGS_RAD_2019_min,0.00472,0.0
+Magmap2019-grid-tmi_rtp_upcon-UC8km12kmRes-AWAGS_MAG_2019_contrast,0.00448,0.00011632089901008618
+Silica_Index_correlation,0.00447,0.0
+Magmap2019-grid-tmi_rtp_upcon-UC42km50kmRes-AWAGS_MAG_2019_energy,0.00445,0.0
+Gypsum_Index_correlation,0.00439,0.0
+Radmap2019-grid-thk_ratio-AWAGS_RAD_2019_mean,0.00432,0.0002722283236733535
+Gravmap2019-grid-grv_fa_contrast,0.0043,0.0003434662353928281
+Gravmap2019-grid-dem_geoid_y_mean,0.00405,1.0832044456050956e-05
+Radmap2019-grid-k_conc-AWAGS_RAD_2019_contrast,0.00403,0.0009181581752385577
+Magmap2019-grid-tmi_rtp_upcon-UC24km30kmRes-AWAGS_MAG_2019_homogeneity,0.00397,0.00048194023747178034
+Radmap2019-grid-u2th_ratio-AWAGS_RAD_2019_correlation,0.00393,0.0003149087874807858
+Magmap2019-grid-tmi_rtp_enhancement-Phase-AWAGS_MAG_2019_contrast,0.0037,0.00010619953006964796
+Magmap2019-grid-tmi_rtp_enhancement-Phase-AWAGS_MAG_2019_max,0.00365,0.00017605311678990917
+Gravmap2019-grid-grv_cscba_1vd_contrast,0.00365,0.0001246241430168143
+Gravmap2019-grid-grv_fa_std,0.00351,5.1038870284307274e-05
+Ferric_Oxide_Composition_correlation,0.00332,0.00011369268975258797
+Silica_Index_contrast,0.0032,0.0002378840915459276
+Radmap2019-grid-dose_terr-AWAGS_RAD_2019_contrast,0.00315,0.0002471609410813277
+Gravmap2016-grid-grv_cscba_contrast,0.00303,8.754397516681873e-05
+Opaque_Index_mean,0.00295,0.00011774865691675645
+Gravmap2016-grid-grv_cscba_homogeneity,0.00294,0.00021032080503122647
+Ferric_Oxide_Content_std,0.0029,8.94022333540554e-05
+Magmap2019-grid-tmi_rtp_upcon-UC36km42kmRes-AWAGS_MAG_2019_energy,0.0029,0.0003003556152353072
+Quartz_Index_correlation,0.00285,0.00011876314453639276
+Radmap2019-grid-th_conc-AWAGS_RAD_2019_contrast,0.00278,8.245403818064289e-05
+Magmap2019-grid-tmi_rtp_upcon-UC24km30kmRes-AWAGS_MAG_2019_energy,0.00266,4.470261099837583e-05
+Green_Vegetation_correlation,0.00263,0.0009179718077506819
+Ferric_Oxide_Content_max,0.00249,0.00018989918557291887
+AlOH_Group_Composition_median,0.00244,0.00018792420293416216
+Ferric_Oxide_Content_correlation,0.00237,0.0001898502385977308
+MetamorphicIsograds,0.00213,0.000720072124282183
+Magmap2019-grid-tmi_rtp_upcon-UC36km42kmRes-AWAGS_MAG_2019_homogeneity,0.00196,0.008527300277697695
+RockUnits_LAO_Igneous rock,0.0019,3.09018102116644e-05
+Magmap2019-grid-tmi_rtp_enhancement-Phase-AWAGS_MAG_2019_min,0.00187,0.00010126222173859277
+Radmap2019-grid-thk_ratio-AWAGS_RAD_2019_contrast,0.00182,6.148043459324929e-05
+Intrusions_Tabberabberan_Granodiorite,0.00178,4.422069541780618e-05
+Quartz_Index_contrast,0.00158,0.002371006813264635
+FeOH_Group_Content_mean,0.00132,8.549244262182404e-05
+FeOH_Group_Content_correlation,0.00118,0.00016894587064500823
+Ferrous_Iron_Content_in_MgOH_correlation,0.00111,0.00018638905134519382
+Intrusions_Tabberabberan_Null,0.0011,2.857606334134665e-05
+Magmap2019-grid-tmi_rtp_as-AWAGS_MAG_2019_correlation,0.00105,9.686203583221423e-05
+RockUnits_LAO_Granite,0.00075,0.00013786722488591638
+RockUnits_LAO_Granodiorite,0.00069,0.00019728132067201026
+RockUnits_LAO_Basalt,0.00054,0.0012332286444410665
+MetamorphicFacies_Benambran_Subgreenschist facies,0.00041,0.0002227868111487059
+Intrusions_Tabberabberan_Granite,0.00032,0.003097339917044621
+Green_Vegetation_min,0.00024,0.0011934562254088978
+RockUnits_LAO_Siltstone,0.00019,0.0003023018937954333
+RockUnits_LAO_Tuff and lapilli tuff,0.00017,0.0007852731992539669
+Intrusions_Tabberabberan_Mafic igneous rock,0.00014,0.005549892903077785
+MetamorphicFacies_KanimblanTablelands_Greenschist facies,0.0001,0.01105551774405907
+MetamorphicFacies_KanimblanTablelands_Subgreenschist facies,6e-05,4.4626879359131846e-05
+RockUnits_LAO_Pyroclastic rock,1e-05,0.00225743005082348
+AlOH_Group_Composition_min,0.0,2.1359538409663337e-35
+AlOH_Group_Content_min,0.0,1.1483129767924449e-05
+FeOH_Group_Content_min,0.0,5.204613133471751e-07
+FeOH_Group_Content_median,0.0,3.454594037347368e-07
+Ferric_Oxide_Composition_min,0.0,0.007366551175111605
+Ferrous_Iron_Content_in_MgOH_min,0.0,0.0
+Ferrous_Iron_Content_in_MgOH_median,0.0,0.00243508980577892
+Ferrous_Iron_Index_min,0.0,3.704743966466052e-33
+Gypsum_Index_min,0.0,1.0643101259022056e-05
+Gypsum_Index_median,0.0,0.00016003597802372334
+Kaolin_Group_Index_min,0.0,2.0914762929503517e-06
+Kaolin_Group_Index_median,0.0,6.425266042415484e-05
+MgOH_Group_Composition_min,0.0,0.0
+MgOH_Group_Composition_median,0.0,0.0
+MgOH_Group_Content_min,0.0,0.0004242433663660919
+MgOH_Group_Content_median,0.0,7.111071980536289e-06
+Opaque_Index_min,0.0,0.0
+Opaque_Index_median,0.0,3.603852295146228e-33
+Quartz_Index_min,0.0,2.398387847614264e-05
+MetamorphicFacies_Benambran_Null,0.0,1.907988654809034e-05
+MetamorphicFacies_Tabberabberan_Null,0.0,5.295141073572624e-05
+MetamorphicFacies_Tabberabberan_Upper Greenschist,0.0,0.0
+Intrusions_Tabberabberan_Rhyolite,0.0,0.0
+Intrusions_Tabberabberan_Tonalite,0.0,0.0018970134557526855
+RockUnits_LAO_Conglomerate,0.0,0.0
+RockUnits_LAO_Dacite,0.0,0.00114766857470521
+RockUnits_LAO_Limestone,0.0,6.049264764890545e-09
+RockUnits_LAO_Monzodiorite,0.0,0.0
+RockUnits_LAO_Mudstone,0.0,1.4192904518011505e-32
+RockUnits_LAO_Rhyolite,0.0,0.0
+RockUnits_LAO_Sandstone,0.0,0.0
+RockUnits_LAO_Sedimentary rock,0.0,0.0
+RockUnits_LAO_Shale,0.0,3.7502863753783443e-06
+RockUnits_LAO_Siliciclastic sedimentary rock,0.0,0.0
+RockUnits_LAO_Tonalite,0.0,2.855062700670103e-06
+RockUnits_LAO_Ultramafic igneous rock,0.0,0.0
