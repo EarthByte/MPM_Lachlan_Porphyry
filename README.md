@@ -17,10 +17,10 @@ The final output is a GeoTIFF file that shows the probability of the targeted mi
 ### Cite
 
 ```bib
-@article{Heidari2025,
+@article{Heidari202?,
   title = {Machine learning framework for prospectivity mapping of porphyry mineralisation in New South Wales, Australia},
   author = {Heidari, Elnaz and Farahbakhsh, Ehsan and Shirmard, Hojat and Kohlman, Fabian and Blevin, Phillip and M{\"u}ller, R. Dietmar},
-  year = {2025},
+  year = {202?},
   journal = {?},
   volume = {?},
   number = {?},
