@@ -1,0 +1,74 @@
+Names (Dendrogram),Describtion
+Correlation of compositional variations within the AlOH mineral group,"Compositional variations within the aluminum hydroxide (AlOH) mineral group, indicating different clay minerals like kaolinite or illite"
+Max of tilt-enhanced CSC Bouguer gravity anomaly,2019 gravity grid of the Complete Spherical Cap Bouguer Anomaly with the tilt derivative enhancement
+Min of gravity free-air anomalies,2019 gravity grid showing the Free-Air anomalies
+Min of gravity free-air anomalies including airborne data,2019 gravity grid showing the Free-Air anomalies  includes airborne gravity data
+Proximity to intrusive boundaries,Boundaries of intrusive rock units
+Proximity to unconformable boundaries of intrusive bodies,Unconformable boundaries of intrusive rocks
+Max of TMI with the first vertical derivative applied,2019 total magnetic intensity grid with the first vertical derivative applied
+Mean of TMI with the first vertical derivative applied,2019 total magnetic intensity grid with the first vertical derivative applied
+Median of TMI with the first vertical derivative applied,2019 total magnetic intensity grid with the first vertical derivative applied
+Min of TMI with the first vertical derivative applied,2019 total magnetic intensity grid with the first vertical derivative applied
+Std of TMI with the first vertical derivative applied,2019 total magnetic intensity grid with the first vertical derivative applied
+Max of RTP with half vertical derivative applied,Reduced-to-pole total magnetic intensity grid with a half vertical derivative applied
+Mean of RTP with half vertical derivative applied,Reduced-to-pole total magnetic intensity grid with a half vertical derivative applied
+Min of RTP with half vertical derivative applied,Reduced-to-pole total magnetic intensity grid with a half vertical derivative applied
+Std of RTP with half vertical derivative applied,Reduced-to-pole total magnetic intensity grid with a half vertical derivative applied
+Max of RTP with first vertical derivative applied,"Total magnetic intensity grid, reduced to the pole, with the first vertical derivative applied"
+Mean of  RTP with first vertical derivative applied,"Total magnetic intensity grid, reduced to the pole, with the first vertical derivative applied"
+Median of RTP with first vertical derivative applied,"Total magnetic intensity grid, reduced to the pole, with the first vertical derivative applied"
+Min of RTP with first vertical derivative applied,"Total magnetic intensity grid, reduced to the pole, with the first vertical derivative applied"
+Std of RTP with first vertical derivative applied,"Total magnetic intensity grid, reduced to the pole, with the first vertical derivative applied"
+Max of RTP with the analytic signal computed,Reduced-to-pole total magnetic intensity grid with the analytic signal computed
+Mean of RTP with the analytic signal computed,Reduced-to-pole total magnetic intensity grid with the analytic signal computed
+Median of RTP with the analytic signal computed,Reduced-to-pole total magnetic intensity grid with the analytic signal computed
+Min of RTP with the analytic signal computed,Reduced-to-pole total magnetic intensity grid with the analytic signal computed
+Std of RTP with the analytic signal computed,Reduced-to-pole total magnetic intensity grid with the analytic signal computed
+Max of RTP enhanced by Bzz,Magnetic grid enhanced by the vertical component of the magnetic gradient tensor (Bzz)
+Mean of  RTP enhanced by Bzz,Magnetic grid enhanced by the vertical component of the magnetic gradient tensor (Bzz)
+Median of RTP enhanced by Bzz,Magnetic grid enhanced by the vertical component of the magnetic gradient tensor (Bzz)
+Min of RTP enhanced by Bzz,Magnetic grid enhanced by the vertical component of the magnetic gradient tensor (Bzz)
+Std of RTP enhanced by Bzz,Magnetic grid enhanced by the vertical component of the magnetic gradient tensor (Bzz)
+Max of RTP transformed into pseudo-gravity data,Reduced-to-pole magnetic grid transformed into pseudo-gravity data
+Mean of  RTP transformed into pseudo-gravity data,Reduced-to-pole magnetic grid transformed into pseudo-gravity data
+Median of RTP transformed into pseudo-gravity data,Reduced-to-pole magnetic grid transformed into pseudo-gravity data
+Min of RTP transformed into pseudo-gravity data,Reduced-to-pole magnetic grid transformed into pseudo-gravity data
+Max of RTP enhanced by pseudo-gravity with THD ,Pseudo-gravity grid with the total horizontal derivative enhancement
+Mean of RTP enhanced by pseudo-gravity with THD ,Pseudo-gravity grid with the total horizontal derivative enhancement
+Std of RTP enhanced by pseudo-gravity with THD,Pseudo-gravity grid with the total horizontal derivative enhancement
+Max of RTP enhanced to display pseudo-susceptibility,Magnetic grid enhanced to display pseudo-susceptibility
+Min of RTP enhanced to display pseudo-susceptibility,Magnetic grid enhanced to display pseudo-susceptibility
+Std of RTP enhanced to display pseudo-susceptibility,Magnetic grid enhanced to display pseudo-susceptibility
+Max of upward continuation applied on RTP at 500m,Residual grid between upward continuations at 0?m and 500?m elevations
+Mean of upward continuation applied on RTP at 500m,Residual grid between upward continuations at 0?m and 500?m elevations
+Median of upward continuation applied on RTP at 500m,Residual grid between upward continuations at 0?m and 500?m elevations
+Min of  upward continuation applied on RTP at 500m,Residual grid between upward continuations at 0?m and 500?m elevations
+Std of upward continuation applied on RTP at 500m,Residual grid between upward continuations at 0?m and 500?m elevations
+Max of upward continuation applied on RTP at 2km,Residual grid between upward continuations at 1?km and 2?km elevations
+Min of upward continuation applied on RTP at 8km,Residual grid between upward continuations at 4?km and 8?km elevations
+Std of upward continuation applied on RTP at 2km,Residual grid between upward continuations at 1?km and 2?km elevations
+Max of upward continuation applied on RTP at 4km,Residual grid between upward continuations at 2?km and 4?km elevations
+Mean of upward continuation applied on RTP at 4km,Residual grid between upward continuations at 2?km and 4?km elevations
+Median of upward continuation applied on RTP at 4km,Residual grid between upward continuations at 2?km and 4?km elevations
+Max of upward continuation applied on RTP at 8km,Residual grid between upward continuations at 4?km and 8?km elevations
+Min of upward continuation applied on RTP at 2km,Residual grid between upward continuations at 1?km and 2?km elevations
+Max of RTP,Total magnetic intensity grid reduced to the pole using the 2019 AWAGS magnetic data
+Std of RTP,Total magnetic intensity grid reduced to the pole using the 2019 AWAGS magnetic data
+Max of TMI,Grid of total magnetic intensity data from the 2019 Australian Wide Airborne Geophysical Survey (AWAGS)
+Min of TMI upward continued at 500m,Residual grid between upward continuations at 0?m and 500?m elevations
+Std of TMI,Grid of total magnetic intensity data from the 2019 Australian Wide Airborne Geophysical Survey (AWAGS)
+Max of RTP with a cell size of 40 m,Total magnetic intensity grid reduced to the pole using the 2019 AWAGS magnetic data with a cell size of 40 meters
+Max of TMI with a cell size of 40 m,Total magnetic intensity grid with a cell size of 40 meters
+Std of RTP with a cell size of 40 m,Total magnetic intensity grid with a cell size of 40 meters
+Proximity to unconformities in metamorphic boundaries,Unconformities within metamorphic rocks
+Std of K concentration from radiometric data,Grid showing potassium concentration derived from the 2019 AWAGS radiometric data
+Std of filtered K concentration from radiometric data,Filtered grid showing potassium concentration derived from the 2019 AWAGS radiometric data
+Max of Th/K ratio from radiometric data,Grid illustrating the ratio of thorium to potassium concentrations from the 2019 AWAGS radiometric data
+Std of Th/K ratio from radiometric data,Grid illustrating the ratio of thorium to potassium concentrations from the 2019 AWAGS radiometric data
+Max of U/K ratio from radiometric data,Grid displaying the ratio of uranium to potassium concentrations from the 2019 AWAGS radiometric survey
+Std of U/K ratio from radiometric data,Grid displaying the ratio of uranium to potassium concentrations from the 2019 AWAGS radiometric survey
+Proximity to faulted boundaries of rock units,Proximity to faulted boundaries of rock units
+Proximity to intrusive boundaries in the Lachlan Orogen,Proximity to intrusive boundaries in the Lachlan Orogen
+Mean of silica index,"The content of silica in the area, including quartz and other silicate minerals"
+Median of Silica index,"The content of silica in the area, including quartz and other silicate minerals"
+Proximity to shear-wave velocity cluster boundaries,Proximity to shear-wave velocity cluster boundaries
