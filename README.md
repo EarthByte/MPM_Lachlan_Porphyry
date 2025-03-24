@@ -2,7 +2,7 @@
 
 [![DOI](https://zenodo.org/badge/728444581.svg)](https://doi.org/10.5281/zenodo.14545436)
 
-This repository contains the notebooks and supplementary files required to reproduce the results presented in the paper (under review): Heidari, E., Farahbakhsh, E., Müller, R. D., Machine learning framework for prospectivity mapping of porphyry mineralisation in New South Wales, Australia. The notebook enables users to create a prospectivity map for porphyry mineralisation in New South Wales, particularly the Lachlan Orogen.
+This repository contains the notebooks and supplementary files required to reproduce the results presented in the paper (under review) titled "Machine learning framework for prospectivity mapping of porphyry mineralisation in New South Wales, Australia." The notebook enables users to create a prospectivity map for porphyry mineralisation in New South Wales, particularly the Lachlan Orogen.
 
 ## Input Files
 
