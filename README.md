@@ -6,7 +6,7 @@ This repository contains the notebooks and supplementary files required to repro
 
 ## Input Files
 
-The input files including geological and geophysical datacan be downloaded from [Link Text](https://doi.org/10.5281/zenodo.14545436). Geological data are provided as polyline and polygon files, while geophysical data are available as raster layers. The polyline files contain information on intrusion boundaries, metamorphic boundaries and isograds, rock unit boundaries, and faults. The polygon files represent intrusions, metamorphic facies, and rock units. The raster layers include magnetic, gravity, seismic, radiometric, remote sensing, and elevation grids.
+The input files including geological and geophysical datacan be downloaded from [Zenodo](https://doi.org/10.5281/zenodo.14545436). Geological data are provided as polyline and polygon files, while geophysical data are available as raster layers. The polyline files contain information on intrusion boundaries, metamorphic boundaries and isograds, rock unit boundaries, and faults. The polygon files represent intrusions, metamorphic facies, and rock units. The raster layers include magnetic, gravity, seismic, radiometric, remote sensing, and elevation grids.
 
 ## Environment Setup
 
