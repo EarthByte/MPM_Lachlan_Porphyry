@@ -2,7 +2,7 @@
 
 [![DOI](https://zenodo.org/badge/728444581.svg)](https://doi.org/10.5281/zenodo.14545436)
 
-This repository contains the notebooks and supplementary files required to reproduce the results presented in the paper (under review) titled "Machine learning framework for prospectivity mapping of porphyry mineralisation in New South Wales, Australia." The notebook enables users to create a prospectivity map for porphyry mineralisation in New South Wales, particularly the Lachlan Orogen.
+This repository contains the notebooks and supplementary files required to reproduce the results presented in the paper titled "Machine learning framework for prospectivity mapping of Cu–Au porphyry mineralisation in the Lachlan Fold Belt, eastern Australia." The notebook enables users to create a prospectivity map for porphyry mineralisation in New South Wales, particularly the Lachlan Orogen.
 
 ## Input Files
 
@@ -19,14 +19,13 @@ The final output is a GeoTIFF file that shows the probability of the targeted mi
 ### Cite
 
 ```bib
-@article{Heidari202?,
-  title = {Machine learning framework for prospectivity mapping of porphyry mineralisation in New South Wales, Australia},
+@article{Heidari2026,
+  title = {Machine learning framework for prospectivity mapping of Cu–Au porphyry mineralisation in the Lachlan Fold Belt, eastern Australia},
   author = {Heidari, Elnaz and Farahbakhsh, Ehsan and Shirmard, Hojat and Kohlman, Fabian and Blevin, Phillip and M{\"u}ller, R. Dietmar},
-  year = {202?},
-  journal = {?},
-  volume = {?},
-  number = {?},
-  pages = {?},
-  doi = {?},
+  year = {2026},
+  journal = {Journal of Asian Earth Sciences},
+  volume = {301},
+  pages = {107018},
+  doi = {10.1016/j.jseaes.2026.107018},
 }
 ```
