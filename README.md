@@ -1,6 +1,6 @@
 # Prospectivity Mapping of Porphyry Mineralisation in New South Wales
 
-[![DOI](https://zenodo.org/badge/728444581.svg)](https://doi.org/10.5281/zenodo.14545436)
+[![DOI](https://zenodo.org/badge/728444581.svg)](https://doi.org/10.5281/zenodo.14545436) [![Mentioned in Awesome Mineral Exploration](https://awesome.re/mentioned-badge.svg)](https://github.com/XploraHub/awesome-mineral-exploration)
 
 This repository contains the notebooks and supplementary files required to reproduce the results presented in the paper titled "Machine learning framework for prospectivity mapping of Cu–Au porphyry mineralisation in the Lachlan Fold Belt, eastern Australia." The notebook enables users to create a prospectivity map for porphyry mineralisation in New South Wales, particularly the Lachlan Orogen.
 
